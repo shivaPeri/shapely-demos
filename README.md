@@ -73,9 +73,9 @@ vsk.geometry(ls)
 
 ## Contents
 1. [hatching](https://github.com/shivaPeri/shapely-demos/blob/main/hatching/README.md), demo of using clip_by_rect
-2. [blob](https://github.com/shivaPeri/shapely-demos/blob/main/hatching/README.md), demo of data manipulation with scipy
-3. [tiling](https://github.com/shivaPeri/shapely-demos/blob/main/hatching/README.md), demo of triangular coordinates with numpy
-4. [moire](https://github.com/shivaPeri/shapely-demos/blob/main/hatching/README.md), demo of using offset curves
+2. [blob](https://github.com/shivaPeri/shapely-demos/blob/main/blob/README.md), demo of data manipulation with scipy
+3. [tiling](https://github.com/shivaPeri/shapely-demos/blob/main/tiling/README.md), demo of triangular coordinates with numpy
+4. [moire](https://github.com/shivaPeri/shapely-demos/blob/main/moire/README.md), demo of using offset curves
 
 ## Usage
 1. create a virtual environment for running vpype
