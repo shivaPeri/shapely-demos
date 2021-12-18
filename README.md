@@ -62,6 +62,13 @@ pentagon = LinearRing(nGon(5))
 intersection = Polygon(pentagon.coords).intersection(mls)
 ```
 
+## vsk.geometry
+When we are finally done with all the preprocessing and data manipulations we want, we can finally write vsketch svg as follows
+```python
+points = np.random.rand(500, 2)
+ls = LineString(points)
+vsk.geometry(ls)
+```
 
 
 ## Contents
