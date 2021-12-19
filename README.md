@@ -1,6 +1,17 @@
 # shapely-demos
 demos of using [shapely](https://shapely.readthedocs.io/en/stable/manual.html) with [vpype](https://github.com/abey79/vpype) and [vsketch](https://vsketch.readthedocs.io/en/latest/) for generating .svg files
 
+## Contents
+1. [hatching](https://github.com/shivaPeri/shapely-demos/blob/main/hatching/README.md), demo of using clip_by_rect
+2. [blob](https://github.com/shivaPeri/shapely-demos/blob/main/blob/README.md), demo of data manipulation with sklearn
+3. [tiling](https://github.com/shivaPeri/shapely-demos/blob/main/tiling/README.md), demo of triangular coordinates with numpy
+4. [moire](https://github.com/shivaPeri/shapely-demos/blob/main/moire/README.md), demo of using offset curves
+
+## Usage
+1. create a virtual environment for running vpype
+2. clone the directory you want to run
+3. run `vsk run` in the directory
+
 ## numpy.ndarray
 Numpy's ndarray's allows for rapidly manipulating collections of points with ease.
 
@@ -42,7 +53,7 @@ def applyVectorField(x, y, xMag=1, yMag=1, xOff=0, yOff=0):
 ## shapely.geometry
 shapely provides several data structures which are useful for plotting, in particular `LineString`, `LinearRing`, `MultiLineString`, and `Polygon`
 
-Suppose we have `point: np.ndarray` from earlier. We can convert basically any iterable to a shapely.geometry as follows
+Suppose we have `point: np.ndarray` from earlier. We can convert basically any iterable to a `shapely.geometry` as follows
 ```python
 points = np.random.rand(500, 2)
 ls = LineString(points)
@@ -50,6 +61,7 @@ ls = LineString(points)
 points = np.random.rand(3, 500, 2)
 mls = MultiLineString(points)
 ```
+Once our coordinate data is represented as a `shapely.geometry`, we can now apply shapely manipulations to the geometry such as clipping (`shapely.ops.clip_by_rect`) or generating offset curves (`LineString.parallel_offset`)
 
 Moreover, using the `Polygon` class allows for complex boolean operations including `intersection`, `union`, etc. 
 Suppose we take the nGon from earlier and want to intersect it with a MultiLineString. We can do so as follows. 
@@ -69,15 +81,3 @@ points = np.random.rand(500, 2)
 ls = LineString(points)
 vsk.geometry(ls)
 ```
-
-
-## Contents
-1. [hatching](https://github.com/shivaPeri/shapely-demos/blob/main/hatching/README.md), demo of using clip_by_rect
-2. [blob](https://github.com/shivaPeri/shapely-demos/blob/main/blob/README.md), demo of data manipulation with scipy
-3. [tiling](https://github.com/shivaPeri/shapely-demos/blob/main/tiling/README.md), demo of triangular coordinates with numpy
-4. [moire](https://github.com/shivaPeri/shapely-demos/blob/main/moire/README.md), demo of using offset curves
-
-## Usage
-1. create a virtual environment for running vpype
-2. clone the directory you want to run
-3. run `vsk run` in the directory
