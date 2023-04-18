@@ -1,4 +1,7 @@
 # shapely-demos
+
+<img src="https://github.com/shivaPeri/shapely-demos/blob/main/tiling/output/tiling_3/tiling_liked_7.svg"/>
+
 demos of using [shapely](https://shapely.readthedocs.io/en/stable/manual.html) with [vpype](https://github.com/abey79/vpype) and [vsketch](https://vsketch.readthedocs.io/en/latest/) for generating .svg files
 
 ## Contents
